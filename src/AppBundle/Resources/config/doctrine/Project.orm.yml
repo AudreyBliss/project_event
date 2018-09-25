@@ -1,0 +1,23 @@
+AppBundle\Entity\Project:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ProjectRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        date:
+            type: string
+            length: 255
+        localisation:
+            type: string
+            length: 255
+        heure:
+            type: time
+    lifecycleCallbacks: {  }
