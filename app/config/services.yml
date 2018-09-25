@@ -29,6 +29,10 @@ services:
         public: true
         tags: ['controller.service_arguments']
 
+
+    AppBundle\Network\:
+        resource: '../../src/AppBundle/Network'
+        public: true
     # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:
     #     arguments:
