@@ -44,7 +44,7 @@ class DefaultController extends Controller
            $gpsEvents[] = $e;
        } 
        
-       return $this->render('AppBundle/Ressources/event.html.twig', [
+       return $this->render('@App/event/event.html.twig', [
         'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         'event' => $gpsEvents
     ]);
