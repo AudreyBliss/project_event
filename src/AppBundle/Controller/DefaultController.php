@@ -52,7 +52,7 @@ class DefaultController extends Controller
     }
 
 
-   /* protected function getEvents(){
+   protected function getEvents(){
     $events = [
         
             ['nom'=>'Nouvelle année', 'date'=>'01/01/2019', 'adresse'=>'Place du Trocadéro 75016 Paris'],
@@ -63,7 +63,7 @@ class DefaultController extends Controller
             ];
     
             return $events;
-    }*/
+    }
 
 
 
