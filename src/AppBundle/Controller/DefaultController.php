@@ -53,7 +53,7 @@ class DefaultController extends Controller
 
 
    protected function getEvents(){
-    $events = [
+    $event = [
         
             ['nom'=>'Nouvelle année', 'date'=>'01/01/2019', 'adresse'=>'Place du Trocadéro 75016 Paris'],
             ['nom'=>'Mon anniversaire', 'date'=>'15/05/2019','adresse'=>'Place de la Bastille 75011 Paris'],
@@ -62,7 +62,7 @@ class DefaultController extends Controller
 
             ];
     
-            return $events;
+            return $event;
     }
 
 
