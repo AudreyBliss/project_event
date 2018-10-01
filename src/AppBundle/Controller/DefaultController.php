@@ -24,7 +24,7 @@ class DefaultController extends Controller
 
 
      /**
-     * @Route("/events", name="events")
+     * @Route("/event", name="event")
      */
 
 
@@ -44,15 +44,15 @@ class DefaultController extends Controller
            $gpsEvents[] = $e;
        } 
        
-       return $this->render('@App/event/events.html.twig', [
+       return $this->render('App/Resources/event.html.twig', [
         'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        'events' => $gpsEvents
+        'event' => $gpsEvents
     ]);
     
     }
 
 
-    protected function getEvents(){
+   /* protected function getEvents(){
     $events = [
         
             ['nom'=>'Nouvelle année', 'date'=>'01/01/2019', 'adresse'=>'Place du Trocadéro 75016 Paris'],
@@ -63,7 +63,7 @@ class DefaultController extends Controller
             ];
     
             return $events;
-    }
+    }*/
 
 
 
