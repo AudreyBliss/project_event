@@ -7,6 +7,10 @@
         <link rel="stylesheet" href="{{asset('public/css/leaflet.css')}}"/>
         <link rel="stylesheet" href="{{asset('public/css/map.css')}}"/>
         {% endblock %}
+        {% block javascripts %}
+        <script  src ="{{asset('public/js/leaflet.js')}}"></script>
+        <script  src ="{{asset('public/js/leaflettt.js')}}"></script>
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         
 
@@ -15,10 +19,6 @@
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}
-        <script  src ="{{asset('public/js/leaflet.js')}}"></script>
         
-        <script  src ="{{asset('public/js/leaflettt.js')}}"></script>
-        {% endblock %}
     </body>
 </html>
