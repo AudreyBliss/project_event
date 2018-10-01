@@ -55,10 +55,10 @@ class DefaultController extends Controller
    protected function getEvents(){
     $event = [
         
-            ['nom'=>'Nouvelle année', 'date'=>'01/01/2019', 'adresse'=>'Place du Trocadéro 75016 Paris'],
-            ['nom'=>'Mon anniversaire', 'date'=>'15/05/2019','adresse'=>'Place de la Bastille 75011 Paris'],
-            ['nom'=>'Cinéma en plein air', 'date'=>'20/09/2018', 'adresse'=>'70 rue de la Liberté 75008 Paris'],
-            ['nom'=>'Feux d\'artifices', 'date'=>'05/11/2018', 'adresse'=>'70 avenue de la Révolution 75008 Paris']
+            ['nom'=>'Nouvelle année', 'date'=>'01/01/2019', 'adresse'=>'Place du Trocadéro 75016 Paris', 'heure'=>'00:00'],
+            ['nom'=>'Mon anniversaire', 'date'=>'15/05/2019','adresse'=>'Place de la Bastille 75011 Paris', 'heure'=>'04:00'],
+            ['nom'=>'Cinéma en plein air', 'date'=>'20/09/2018', 'adresse'=>'70 rue de la Liberté 75008 Paris', 'heure'=>'20:00'],
+            ['nom'=>'Feux d\'artifices', 'date'=>'05/11/2018', 'adresse'=>'70 avenue de la Révolution 75008 Paris', 'heure'=>'22:00']
 
             ];
     
