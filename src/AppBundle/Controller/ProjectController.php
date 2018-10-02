@@ -43,7 +43,7 @@ class ProjectController extends Controller
             $em->persist($project);
             $em->flush();
 
-            return $this->redirectToRoute('prefix_event_show', array('id' => $project->getId()));
+            return $this->redirectToRoute('event_show', array('id' => $project->getId()));
         }
 
         return $this->render('project/new.html.twig', array(
@@ -78,7 +78,7 @@ class ProjectController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('prefix_event_edit', array('id' => $project->getId()));
+            return $this->redirectToRoute('event_edit', array('id' => $project->getId()));
         }
 
         return $this->render('project/edit.html.twig', array(
@@ -103,7 +103,7 @@ class ProjectController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('prefix_event_index');
+        return $this->redirectToRoute('event_index');
     }
 
     /**
@@ -116,7 +116,7 @@ class ProjectController extends Controller
     private function createDeleteForm(Project $project)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('prefix_event_delete', array('id' => $project->getId())))
+            ->setAction($this->generateUrl('event_delete', array('id' => $project->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;
