@@ -52,7 +52,22 @@ class DefaultController extends Controller
     }
 
 
-   /*protected function getEvents(){
+   protected function getEvents(){
+    
+    $em = $this->getDoctrine()->getManager();
+
+    $projects = $em->getRepository('AppBundle:Project')->findAll();
+
+    return $this->render('project/index.html.twig', array(
+        'projects' => $projects,
+    ));
+
+   }
+   
+   
+   
+   
+    /*protected function getEvents(){
     $event = [
         
             ['nom'=>'Nouvelle année', 'date'=>'31/12/2019', 'adresse'=>'Place du Trocadéro 75016 Paris', 'heure'=>'00:00'],
