@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Project controller.
  *
- * @Route("project")
  */
 class ProjectController extends Controller
 {
