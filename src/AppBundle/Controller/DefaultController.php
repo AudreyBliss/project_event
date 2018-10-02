@@ -36,7 +36,7 @@ class DefaultController extends Controller
        $gpsEvents = [];
        
        foreach($events as $e) {
-          /* $adresse = str_replace(' ', '+', $e['localisation']);*/
+           $adresse = str_replace(' ', '+', $e['localisation']);
            $suggestions = json_decode($curl->curl_get($adresse),true);
            $gps = $suggestions['features'][0]['geometry']['coordinates'];
            $e['latitude'] = $gps[1];
@@ -58,9 +58,8 @@ class DefaultController extends Controller
 
     $projects = $em->getRepository('AppBundle:Project')->findAll();
 
-    return $this->render('project/index.html.twig', array(
-        'projects' => $projects,
-    ));
+    return  $projects ;  
+    
 
    }
    
