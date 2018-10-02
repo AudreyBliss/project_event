@@ -9,12 +9,15 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Project controller.
  *
+ * @Route("project")
  */
 class ProjectController extends Controller
 {
     /**
      * Lists all project entities.
      *
+     * @Route("/", name="prefix_event_index")
+     * @Method("GET") 
      */
     public function indexAction()
     {
@@ -30,6 +33,9 @@ class ProjectController extends Controller
     /**
      * Creates a new project entity.
      *
+     * @Route("/new", name="prefix_event_new")
+     * @Method({"GET", "POST"})
+     * 
      */
     public function newAction(Request $request)
     {
@@ -54,6 +60,9 @@ class ProjectController extends Controller
     /**
      * Finds and displays a project entity.
      *
+     * @Route("/{id}", name="prefix_event_show")
+     * @Method("GET")
+     * 
      */
     public function showAction(Project $project)
     {
@@ -68,6 +77,9 @@ class ProjectController extends Controller
     /**
      * Displays a form to edit an existing project entity.
      *
+     * @Route("/{id}/edit", name="prefix_event_edit")
+     * @Method({"GET", "POST"})
+     * 
      */
     public function editAction(Request $request, Project $project)
     {
@@ -91,6 +103,9 @@ class ProjectController extends Controller
     /**
      * Deletes a project entity.
      *
+     * @Route("/{id}", name="prefix_event_delete")
+     * @Method("DELETE")
+     * 
      */
     public function deleteAction(Request $request, Project $project)
     {
