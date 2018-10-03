@@ -36,7 +36,7 @@ class DefaultController extends Controller
        $gpsEvents = [];
        
        foreach($events as $e) {
-           $adresse = str_replace(' ', '+', $e['localisation']);
+           $adresse = str_replace(' ', '+', $e['adresse']);
            $suggestions = json_decode($curl->curl_get($adresse),true);
            $gps = $suggestions['features'][0]['geometry']['coordinates'];
            $e['latitude'] = $gps[1];
