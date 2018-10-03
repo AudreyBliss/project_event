@@ -33,8 +33,7 @@ class DefaultController extends Controller
        $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
        $events = $this -> getEvents();
-       $gpsEvents = [];
-       var_dump ($adresse); die ;      
+       $gpsEvents = [];      
        foreach($events as $e) {
            $adresse = str_replace(' ', '+', $e['adresse']);
            $suggestions = json_decode($curl->curl_get($adresse),true);
