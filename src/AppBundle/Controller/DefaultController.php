@@ -34,9 +34,9 @@ class DefaultController extends Controller
 
        $events = $this -> getEvents();
        $gpsEvents = []; 
-       //var_dump($e);die;     
+       var_dump($events);die();     
        foreach($events as $e) {
-          // $adresse = str_replace(' ', '+', $e['adresse']);
+          //$adresse = str_replace(' ', '+', $e['adresse']);
           
           $adresse ->$e->adresse;
           // $adresse = $e->adresse; 
@@ -49,8 +49,8 @@ class DefaultController extends Controller
            $e['longitude'] = $gps[0];
            $gpsEvents[] = $e;
        } 
-       var_dump($e); die();
-       //var_dump($events);die;
+       //var_dump($e); die();
+       //var_dump($events); die();
        return $this->render('@App/event/event.html.twig', [
         'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         'event' => $gpsEvents
