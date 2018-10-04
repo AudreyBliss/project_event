@@ -36,9 +36,9 @@ class DefaultController extends Controller
        $gpsEvents = []; 
        var_dump($events);die();     
        foreach($events as $e) {
-          //$adresse = str_replace(' ', '+', $e['adresse']);
+          $adresse = str_replace(' ', '+', $e->localisation);
           
-          $adresse ->$e->adresse;
+         // $adresse ->$e->adresse;
           // $adresse = $e->adresse; 
           //$adresse->$e('adresse');
            /*$adresse = str_replace(' ', '+', ($e->adresse));*/
