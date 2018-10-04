@@ -25,7 +25,7 @@ class Project
     /**
      * @var string
      */
-    private $localisation;
+    public $localisation;
 
     /**
      * @var \DateTime

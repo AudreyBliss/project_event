@@ -34,23 +34,17 @@ class DefaultController extends Controller
 
        $events = $this -> getEvents();
        $gpsEvents = []; 
-       //var_dump($events);die();     
+          
        foreach($events as $e) {
           $adresse = str_replace(' ', '+', $e->localisation);
           
-         // $adresse ->$e->adresse;
-          // $adresse = $e->adresse; 
-          //$adresse->$e('adresse');
-           /*$adresse = str_replace(' ', '+', ($e->adresse));*/
-           /*$adresse = str_replace(' ', '+', $e('adresse'));*/
            $suggestions = json_decode($curl->curl_get($adresse),true);
            $gps = $suggestions['features'][0]['geometry']['coordinates'];
            $e['latitude'] = $gps[1];
            $e['longitude'] = $gps[0];
            $gpsEvents[] = $e;
        } 
-       //var_dump($e); die();
-       //var_dump($events); die();
+       
        return $this->render('@App/event/event.html.twig', [
         'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         'event' => $gpsEvents
