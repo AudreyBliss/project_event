@@ -34,7 +34,7 @@ class DefaultController extends Controller
 
        $events = $this -> getEvents();
        $gpsEvents = []; 
-       var_dump($events);die();     
+       //var_dump($events);die();     
        foreach($events as $e) {
           $adresse = str_replace(' ', '+', $e->localisation);
           
