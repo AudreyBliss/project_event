@@ -38,7 +38,7 @@ class DefaultController extends Controller
        foreach($events as $e) {
           // $adresse = str_replace(' ', '+', $e['adresse']);
             
-         // $adresse = 
+          $e = $adresse;
           //$adresse->$e('adresse');
            /*$adresse = str_replace(' ', '+', ($e->adresse));*/
            /*$adresse = str_replace(' ', '+', $e('adresse'));*/
