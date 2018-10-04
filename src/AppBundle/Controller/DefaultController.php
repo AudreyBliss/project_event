@@ -40,8 +40,10 @@ class DefaultController extends Controller
           
            $suggestions = json_decode($curl->curl_get($adresse),true);
            $gps = $suggestions['features'][0]['geometry']['coordinates'];
-           $e['latitude'] = $gps[1];
-           $e['longitude'] = $gps[0];
+           //$e['latitude'] = $gps[1];
+           //$e['longitude'] = $gps[0];
+           $e->latitude = $gps[1];
+           $e->longitude = $gps[0];
            $gpsEvents[] = $e;
        } 
        
