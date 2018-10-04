@@ -28,7 +28,7 @@ class Project
     public $localisation;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     private $heure;
 

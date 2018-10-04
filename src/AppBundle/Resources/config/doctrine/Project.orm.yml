@@ -19,5 +19,6 @@ AppBundle\Entity\Project:
             type: string
             length: 255
         heure:
-            type: time
+            type: string
+            length: 255
     lifecycleCallbacks: {  }
