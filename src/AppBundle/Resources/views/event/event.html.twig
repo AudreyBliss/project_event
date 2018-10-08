@@ -2,12 +2,12 @@
 
 {%block body%} 
 
-<header id="overall-header">
+<header>
     
-    <div id="overall-header-login">
+    <div id="">
         <ul>
             <li>
-                <select id="lang_switcher">
+                <select id="">
                     <option selected="selected" value="/app.php/fr/agenda/next">Français
                     </option>
                     <option   value="/app.php/en/agenda/next">English
@@ -15,81 +15,64 @@
                 </select>
             </li>
 
-            <li><a class="register_link separator" href="/app.php/fr/register/">S'INSCRIRE</a></li>
-            <li><a class="login_link" href="/app.php/login">SE CONNECTER</a></li>
+            <li><a class="" href="/app.php/fr/register/">S'INSCRIRE</a></li>
+            <li><a class="" href="/app.php/login">SE CONNECTER</a></li>
         </ul>
     </div>
 
-    <div id="overall-header-main">
-        <div id="header_main_container">
-            <div>
-                <a href="/app.php/"><img id="logobadge" src="/img/sciencetour.png" alt="Logo d'il paraît que..."/></a>
-                <h1>Il parait<br/>que ...</h1>
-                <a href="http://www.lespetitsdebrouillards.org" target="_blank"><img id="logopdeb" src="/img/pdeb.png" alt="logo petit deb"/></a>
-            </div>
-            <nav>
-                <ul>
-                    <li ><a href="/app.php/">Accueil</a></li>
-                    <li id="nav_agenda"><a href="/app.php/fr/agenda">Agenda</a></li>
-                    <li>
-                        <form id="searchbar" method="get"
-                              action="/app.php/fr/search">
-                            <input type="text" id="searchbar_query"
-                                   name="query"/>
-                            <input type="submit" value=""/>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    
+    <div>
+        <a href="/app.php/"><img src="/img/sciencetour.png" alt="Logo d'il paraît que..."/></a>
+        <h1>Il parait que ...</h1>
+        <a href="http://www.lespetitsdebrouillards.org" target="_blank"><img src="/img/pdeb.png" alt="logo petit deb"/></a>
     </div>
+    <nav>
+        <ul>
+            <li ><a href="/app.php/">Accueil</a></li>
+            <li ><a href="/app.php/fr/agenda">Agenda</a></li>
+            <li>
+                <form id="searchbar" method="get"
+                      action="/app.php/fr/search">
+                    <input type="text" id="searchbar_query"
+                           name="query"/>
+                    <input type="submit" value=""/>
+                </form>
+            </li>
+        </ul>
+    </nav>
+       
 </header>
 
 
-<div id="banner"  class="jcarousel-wrapper ">
-    <div id="banner-container" class="jcarousel jcarousel-skin-tst-banner">
-        <div class="banner-box">
-		    <div id="custom-map" class="main-map map-box" data-position="default"></div>
-                <div class="banner-overlay map-overlay markerRenderable">
-                    <div class="banner-overlay-box">
-                        <h3>Événements</h3>
-                        <ul class="banner-overlay-nav">
-                            <li><a href="/app.php/fr/agenda"><i class="icon-pushpin"></i>À la une<span>0</span></a></li>
-                            <li><a href="/app.php/fr/agenda/favorite"><i class="icon-star"></i>Favoris<span>0</span></a></li>
-                            <li><a href="/app.php/fr/agenda/next" class="active"><i class="icon-forward"></i>Les prochains<span>0</span></a></li>
-                            <li><a href="/app.php/fr/agenda/past"><i class="icon-backward"></i>Les passés<span>0</span></a></li>
-                            <li><a href="/app.php/fr/agenda/trucks"><i class="icon-truck"></i>Trucks<span>0</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-    		</div>
-        </div>
-    <p class="jcarousel-pagination" data-jcarouselpagination="true"></p>
-</div>
+<main>
 
-<div id="main-container">
-    <div id="main">
-        <div id="content" class="normalcontent">
-			<section class="event-items">
+    <section>            
+        <h3>Événements</h3>
+        <ul class="banner-overlay-nav">
+            <li><a href="/app.php/fr/agenda"><i class="icon-pushpin"></i>À la une<span>0</span></a></li>
+            <li><a href="/app.php/fr/agenda/favorite"><i class="icon-star"></i>Favoris<span>0</span></a></li>
+            <li><a href="/app.php/fr/agenda/next" class="active"><i class="icon-forward"></i>Les prochains<span>0</span></a></li>
+            <li><a href="/app.php/fr/agenda/past"><i class="icon-backward"></i>Les passés<span>0</span></a></li>
+            <li><a href="/app.php/fr/agenda/trucks"><i class="icon-truck"></i>Trucks<span>0</span></a></li>
+        </ul>
+    </section>
+
+	<section>
 	        <h1>Les prochains</h1>
-	        </section>
-		</div>
+	</section>
+		
 	    <aside>
-		<h1>AGENDA</h1>
-        <div id="calendar-holder"></div>
+            <h1>AGENDA</h1>
+            <div id="calendar-holder"></div>
 
-        <h1 class="favorites_h1">Autour de moi</h1>
+            <h1>Autour de moi</h1>
 
-    <div class="aside-box colored-box bgBlue">
-	<div id="all-map" class="aside-map map-box" data-position="self"></div>
-		<div class="events-list">
-		<table class="striped bgWhite aside-box-table">
-					</table>
-	</div>
-</div>
-			</aside>
-    </div>
-</div>
+
+            <table>
+            </table>
+	
+		</aside>
+  
      <h1>Evenements</h1>
 
        <ul id="list">
@@ -110,5 +93,6 @@
                 display_marker({{e.latitude}}, {{e.longitude}})
             {% endfor %}
        </script> 
-
+</main>
 {%endblock%}
+
