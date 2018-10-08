@@ -23,9 +23,9 @@
     <div id="overall-header-main">
         <div id="header_main_container">
             <div>
-                <a href="/app.php/"><img id="logobadge" src="web/public/img/sciencetour.png" alt="Logo d'il paraît que..."/></a>
+                <a href="/app.php/"><img id="logobadge" src="/img/sciencetour.png" alt="Logo d'il paraît que..."/></a>
                 <h1>Il parait<br/>que ...</h1>
-                <a href="http://www.lespetitsdebrouillards.org" target="_blank"><img id="logopdeb" src="web/public/img/pdeb.png" alt="logo petit deb"/></a>
+                <a href="http://www.lespetitsdebrouillards.org" target="_blank"><img id="logopdeb" src="/img/pdeb.png" alt="logo petit deb"/></a>
             </div>
             <nav>
                 <ul>
@@ -44,6 +44,52 @@
         </div>
     </div>
 </header>
+
+
+<div id="banner"  class="jcarousel-wrapper ">
+    <div id="banner-container" class="jcarousel jcarousel-skin-tst-banner">
+        <div class="banner-box">
+		    <div id="custom-map" class="main-map map-box" data-position="default"></div>
+                <div class="banner-overlay map-overlay markerRenderable">
+                    <div class="banner-overlay-box">
+                        <h3>Événements</h3>
+                        <ul class="banner-overlay-nav">
+                            <li><a href="/app.php/fr/agenda"><i class="icon-pushpin"></i>À la une<span>0</span></a></li>
+                            <li><a href="/app.php/fr/agenda/favorite"><i class="icon-star"></i>Favoris<span>0</span></a></li>
+                            <li><a href="/app.php/fr/agenda/next" class="active"><i class="icon-forward"></i>Les prochains<span>0</span></a></li>
+                            <li><a href="/app.php/fr/agenda/past"><i class="icon-backward"></i>Les passés<span>0</span></a></li>
+                            <li><a href="/app.php/fr/agenda/trucks"><i class="icon-truck"></i>Trucks<span>0</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+    		</div>
+        </div>
+    <p class="jcarousel-pagination" data-jcarouselpagination="true"></p>
+</div>
+
+<div id="main-container">
+    <div id="main">
+        <div id="content" class="normalcontent">
+			<section class="event-items">
+	        <h1>Les prochains</h1>
+	        </section>
+		</div>
+	    <aside>
+		<h1>AGENDA</h1>
+        <div id="calendar-holder"></div>
+
+        <h1 class="favorites_h1">Autour de moi</h1>
+
+    <div class="aside-box colored-box bgBlue">
+	<div id="all-map" class="aside-map map-box" data-position="self"></div>
+		<div class="events-list">
+		<table class="striped bgWhite aside-box-table">
+					</table>
+	</div>
+</div>
+			</aside>
+    </div>
+</div>
      <h1>Evenements</h1>
 
        <ul id="list">
