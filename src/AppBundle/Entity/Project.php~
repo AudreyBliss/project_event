@@ -18,7 +18,7 @@ class Project
     private $nom;
 
     /**
-     * @var string
+     * @var DateTime
      */
     private $date;
 
@@ -139,4 +139,3 @@ class Project
         return $this->heure;
     }
 }
-
