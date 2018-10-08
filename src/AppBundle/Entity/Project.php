@@ -18,7 +18,7 @@ class Project
     private $nom;
 
     /**
-     * @var string
+     * @var DateTime
      */
     private $date;
 

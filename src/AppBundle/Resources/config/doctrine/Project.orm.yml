@@ -13,12 +13,12 @@ AppBundle\Entity\Project:
             type: string
             length: 255
         date:
-            type: string
-            length: 255
+            type: date
+            
         localisation:
             type: string
             length: 255
         heure:
-            type: string
-            length: 255
+            type: time
+            
     lifecycleCallbacks: {  }
