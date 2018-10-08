@@ -1,6 +1,49 @@
 {% extends 'base.html.twig' %}
 
 {%block body%} 
+
+<header id="overall-header">
+    
+    <div id="overall-header-login">
+        <ul>
+            <li>
+                <select id="lang_switcher">
+                    <option selected="selected" value="/app.php/fr/agenda/next">Français
+                    </option>
+                    <option   value="/app.php/en/agenda/next">English
+                    </option>
+                </select>
+            </li>
+
+            <li><a class="register_link separator" href="/app.php/fr/register/">S'INSCRIRE</a></li>
+            <li><a class="login_link" href="/app.php/login">SE CONNECTER</a></li>
+        </ul>
+    </div>
+
+    <div id="overall-header-main">
+        <div id="header_main_container">
+            <div>
+                <a href="/app.php/"><img id="logobadge" src="/img/sciencetour.png" alt="Logo d'il paraît que..."/></a>
+                <h1>Il parait<br/>que ...</h1>
+                <a href="http://www.lespetitsdebrouillards.org" target="_blank"><img id="logopdeb" src="/img/pdeb.png" alt="logo petit deb"/></a>
+            </div>
+            <nav>
+                <ul>
+                    <li ><a href="/app.php/">Accueil</a></li>
+                    <li id="nav_agenda"><a href="/app.php/fr/agenda">Agenda</a></li>
+                    <li>
+                        <form id="searchbar" method="get"
+                              action="/app.php/fr/search">
+                            <input type="text" id="searchbar_query"
+                                   name="query"/>
+                            <input type="submit" value=""/>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
      <h1>Evenements</h1>
 
        <ul id="list">

@@ -3,14 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
+        
         {% block stylesheets %}
         <link rel="stylesheet" href="{{asset('public/css/leaflet.css')}}"/>
         <link rel="stylesheet" href="{{asset('public/css/map.css')}}"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+
+        <link rel="stylesheet" href="/bundles/thesciencetourevent/css/jquery-ui-themes/sciencetour-fullcalendar/jquery-ui-1.10.3.custom.min.css" />
+	    <link rel="stylesheet" href="/bundles/adesignscalendar/css/fullcalendar/fullcalendar.css" />
+        
         {% endblock %}
+        
         {% block javascripts %}
         <script  src ="{{asset('public/js/leaflet.js')}}"></script>
         <script  src ="{{asset('public/js/leaflettt.js')}}"></script>
         {% endblock %}
+       
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         
 
