@@ -19,7 +19,7 @@
             <tr>
                 <td><a href="{{ path('event_show', { 'id': project.id }) }}">{{ project.id }}</a></td>
                 <td>{{ project.nom }}</td>
-                <td>{{ project.date }}</td>
+                <td>{% if project.heure %}{{ project.date|date('d/m/Y') }}{% endif %}</td>
                 <td>{{ project.localisation }}</td>
                 <td>{% if project.heure %}{{ project.heure|date('H:i:s') }}{% endif %}</td>
                 <td>

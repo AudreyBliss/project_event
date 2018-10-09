@@ -4,7 +4,7 @@
 
 <header>
     
-    <div id="">
+    {#<div id="">
         <ul>
             <li>
                 <select id="">
@@ -71,7 +71,7 @@
             <table>
             </table>
 	
-		</aside>
+		</aside>#}
   
      <h1>Evenements</h1>
 
@@ -80,7 +80,7 @@
             <li>{{e.nom}}</li>
             <li>{{e.date | date('d/m/Y')}}</li>
             <li>{{e.localisation }}</li>
-            <li>{{e.heure |date('H:i')}}</li>   
+            <li>{{e.heure | date('H:i')}}</li>   
         {% endfor %}
         </ul>
 
