@@ -21,7 +21,7 @@
                 <td>{{ project.nom }}</td>
                 <td>{% if project.heure %}{{ project.date|date('d/m/Y') }}{% endif %}</td>
                 <td>{{ project.localisation }}</td>
-                <td>{% if project.heure %}{{ project.heure|date('H:i:s') }}{% endif %}</td>
+                <td>{% if project.heure %}{{ project.heure|date('H:i') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>
