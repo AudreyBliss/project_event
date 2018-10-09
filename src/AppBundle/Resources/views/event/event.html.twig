@@ -84,7 +84,9 @@
         {% endfor %}
         </ul>
 
-        <div id="mapid"></div>
+        {{ leaflet_map('mapid') }}
+
+        {# <div id="mapid"></div> #}
 
        <script>
             let mymap = L.map('mapid').setView([48.8534, 2.3488], 13); 
