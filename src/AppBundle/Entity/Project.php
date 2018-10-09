@@ -23,7 +23,7 @@ class Project
     private $date;
 
     /**
-     * @var string
+     * @var DateTime
      */
     public $localisation;
 
