@@ -85,8 +85,11 @@
         </ul>
 
         {#{{ function mapFunction('$map') }}#}
-        {{ function mapFunction('mapid') }}
+       {# {{ function mapFunction('mapid') }}#}
         {# <div id="mapid"></div> #}
+        {{function mapFunction($mapid)}}
+
+
 
        <script>
             let mymap = L.map('mapid').setView([48.8534, 2.3488], 13); 
