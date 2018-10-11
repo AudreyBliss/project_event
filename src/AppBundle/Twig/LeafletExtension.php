@@ -11,41 +11,34 @@ class LeafletExtension extends AbstractExtension
     {
         return [
             new TwigFunction('leaflet_map',[$this,'leafletMapFunction']),
-
+            new TwigFunction('marker_map',[$this,'markerMapFunction']),
         ];
 
     }
 
     public function leafletMapFunction($mapid)
     {
-        $map = "<div id='$mapid'></div>";
+        $map = "<div id='$mapid'></div>
+        <script>let mymap = L.map('$mapid').setView([48.8534, 2.3488], 13); 
+        display_map();</script>";
         return $map;
 
     }
     
 //affichage map+marqueurs
 
-    public function getFunctions2()
-    {
-    return [
-        new TwigFunction('marker_map',[$this,'markerMapFunction']),
-
-    ];
-
-    }
-
+/*
     public function markertMapFunction($marker)
     {
     $point = "<script>
-    let mymap = L.map('$marker').setView([48.8534, 2.3488], 13); 
-    display_map();
+    
     {% for e in event %}
         display_marker({{e.latitude}}, {{e.longitude}})
     {% endfor %}
     </script>";
     return $point;
 
-    }
+    }*/
 
 
 
