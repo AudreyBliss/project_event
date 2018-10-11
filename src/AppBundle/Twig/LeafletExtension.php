@@ -6,7 +6,7 @@ use Twig\TwigFunction;
 
 class LeafletExtension extends AbstractExtension
 {
-
+//affichage de la map
     public function getFunctions()
     {
         return [
@@ -22,6 +22,31 @@ class LeafletExtension extends AbstractExtension
         return $map;
 
     }
+    
+//affichage map+marqueurs
+
+    public function getFunctions2()
+    {
+    return [
+        new TwigFunction('marker_map',[$this,'markerMapFunction']),
+
+    ];
+
+    }
+
+    public function markertMapFunction($marker)
+    {
+    $point = "<script>
+    let mymap = L.map('mapid').setView([48.8534, 2.3488], 13); 
+    display_map();
+    {% for e in event %}
+        display_marker({{e.latitude}}, {{e.longitude}})
+    {% endfor %}
+    </script>";
+    return $point;
+
+    }
+
 
 
 }

@@ -91,13 +91,14 @@
 
 
 
-       <script>
+      {# <script>
             let mymap = L.map('mapid').setView([48.8534, 2.3488], 13); 
             display_map();
             {% for e in event %}
                 display_marker({{e.latitude}}, {{e.longitude}})
             {% endfor %}
-       </script> 
+       </script>#} 
+       {{marker_map('mapid')|raw}}
 </main>
 {%endblock%}
 
