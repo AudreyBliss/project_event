@@ -23,12 +23,12 @@ class Project
     private $date;
 
     /**
-     * @var DateTime
+     * @var string
      */
-    public $localisation;
+    protected $localisation;
 
     /**
-     * @var string
+     * @var DateTime
      */
     private $heure;
 
