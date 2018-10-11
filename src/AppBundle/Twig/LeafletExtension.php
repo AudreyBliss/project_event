@@ -37,7 +37,7 @@ class LeafletExtension extends AbstractExtension
     public function markertMapFunction($marker)
     {
     $point = "<script>
-    let mymap = L.map('mapid').setView([48.8534, 2.3488], 13); 
+    let mymap = L.map('$marker').setView([48.8534, 2.3488], 13); 
     display_map();
     {% for e in event %}
         display_marker({{e.latitude}}, {{e.longitude}})
