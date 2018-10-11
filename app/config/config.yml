@@ -32,7 +32,7 @@ framework:
         log: true
 
 # Twig Configuration
-twig:
+Twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
 
