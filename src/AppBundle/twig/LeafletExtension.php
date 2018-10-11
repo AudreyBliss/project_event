@@ -7,7 +7,7 @@ use Twig\TwigFunction;
 class LeafletExtension extends AbstractExtension
 {
 
-    public function getFunction()
+    public function getFunctions()
     {
         return [
             new TwigFunction('map',[$this,'mapFunction']),
