@@ -98,7 +98,9 @@
                 display_marker({{e.latitude}}, {{e.longitude}})
             {% endfor %}
        </script>#} 
-       {{marker_map('mapid')|raw}}
+       <script>
+       {{marker_map('mapid')}}
+       </script>
 </main>
 {%endblock%}
 
