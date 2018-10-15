@@ -28,14 +28,14 @@ class LeafletExtension extends AbstractExtension
 //affichage map+marqueurs
 
 
-    public function markertMapFunction($marker)
+    public function markerMapFunction($marker)
     {
-    $marker ="<script>
+    $point ="<script>
     {% for e in event %}
         display_marker({{e.latitude}}, {{e.longitude}})
     {% endfor %}
     </script>";
-    return $marker;
+    return $point;
 
     }
 
