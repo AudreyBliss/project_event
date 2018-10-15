@@ -32,7 +32,7 @@ class LeafletExtension extends AbstractExtension
     {
     $point ="<script>
     {% for e in event %}
-       display_marker.('$marker').({{e.latitude}}, {{e.longitude}})
+    ('$marker').display_marker({{e.latitude}}, {{e.longitude}})
     {% endfor %}
     </script>";
     return $point;
