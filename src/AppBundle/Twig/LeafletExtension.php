@@ -20,7 +20,7 @@ class LeafletExtension extends AbstractExtension
     {
         $map = "<div id='$mapid'></div>
         <script>let mymap = L.map('$mapid').setView([48.8534, 2.3488], 13); 
-        display_map();</script>";
+        display_map(mymap);</script>";
         return $map;
 
     }
@@ -28,13 +28,13 @@ class LeafletExtension extends AbstractExtension
 //affichage map+marqueurs
 
 
-    public function markerMapFunction($point)
+    public function markerMapFunction($marker)
     {
     $point ="<script>
     {% for e in event %}
-    display_marker({{e.latitude}}, {{e.longitude}})
+    display_marker(mymap, {{e.latitude}}, {{e.longitude}})
     {% endfor %}
-    </>";
+    </script>";
     return $point;
 
     }

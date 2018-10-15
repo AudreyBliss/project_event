@@ -1,4 +1,4 @@
-function display_map ()
+function display_map (mymap)
 {
    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -10,7 +10,7 @@ function display_map ()
 
 }
 
-function display_marker(latitude, longitude){
+function display_marker(mymap, latitude, longitude){
 
     L.marker([latitude, longitude]).addTo(mymap);
 }
