@@ -127,7 +127,7 @@ class ProjectController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $events = $em->getRepository('AppBundle:Project')->findAll();
- var_dump($events); die;
+
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
         $gpsEvents = []; 
@@ -143,6 +143,7 @@ class ProjectController extends Controller
             $e->longitude = $gps[0];
             $gpsEvents[] = $e;
         } 
+var_dump($gpsEvents); die;
  
         return $this->json( $projects);
     }
