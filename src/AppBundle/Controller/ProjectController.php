@@ -127,7 +127,7 @@ class ProjectController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $projects = $em->getRepository('AppBundle:Project')->findAll();
-        var_dump($projects);die;
+ 
         return $this->json( $projects);
     }
 
