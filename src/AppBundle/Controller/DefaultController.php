@@ -60,7 +60,7 @@ class DefaultController extends Controller
     $em = $this->getDoctrine()->getManager();
 
     $projects = $em->getRepository('AppBundle:Project')->findAll();
-
+    var_dump($projects);die;
     return  $projects ;  
     
 
