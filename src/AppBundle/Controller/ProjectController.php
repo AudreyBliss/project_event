@@ -126,7 +126,23 @@ class ProjectController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $projects = $em->getRepository('AppBundle:Project')->findAll();
+        $events = $em->getRepository('AppBundle:Project')->findAll();
+ var_dump($events); die;
+        $curl = $this -> get('AppBundle\Network\ServiceCurl');
+
+        $gpsEvents = []; 
+           
+        foreach($events as $e) {
+           $adresse = str_replace(' ', '+', $e->getLocalisation());// pour une entité privé ou protected
+           
+            $suggestions = json_decode($curl->curl_get($adresse),true);
+            $gps = $suggestions['features'][0]['geometry']['coordinates'];
+            //$e['latitude'] = $gps[1];
+            //$e['longitude'] = $gps[0];
+            $e->latitude = $gps[1];
+            $e->longitude = $gps[0];
+            $gpsEvents[] = $e;
+        } 
  
         return $this->json( $projects);
     }
