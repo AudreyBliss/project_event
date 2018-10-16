@@ -144,9 +144,9 @@ class ProjectController extends Controller
             $gpsEvents[] = $e;
         } 
  
-        var_dump($events); die;
+        //var_dump($events); die;
 
-        return $this->json($gpsEvents);
+        return $this->json($events);
     }
 
 }
