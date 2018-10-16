@@ -16,7 +16,7 @@ function display_marker(mymap, latitude, longitude){
 }
 
 function get_markers(){
-    fetch('')
+    fetch('http://project_event/web/app_dev.php/event/json')
   .then(function(response) {
     return response.json();
   })
