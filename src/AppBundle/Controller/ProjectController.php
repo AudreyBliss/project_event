@@ -121,4 +121,16 @@ class ProjectController extends Controller
             ->getForm()
         ;
     }
+
+    public function jsonAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $projects = $em->getRepository('AppBundle:Project')->findAll();
+
+        return $this->json('project/json.html.twig', array(
+            'projects' => $projects,
+        ));
+    }
+
 }

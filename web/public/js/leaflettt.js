@@ -15,6 +15,15 @@ function display_marker(mymap, latitude, longitude){
     L.marker([latitude, longitude]).addTo(mymap);
 }
 
+function get_markers(){
+    fetch('')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
+}
 
 
 

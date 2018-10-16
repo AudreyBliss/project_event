@@ -55,4 +55,13 @@ $collection->add('event_delete', new Route(
     array('DELETE')
 ));
 
+$collection->add('event_json', new Route(
+    '/json',
+    array('_controller' => 'AppBundle:Project:json'),
+    array(),
+    array(),
+    '',
+    array(),
+    array('GET')
+));
 return $collection;
