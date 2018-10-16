@@ -128,9 +128,7 @@ class ProjectController extends Controller
 
         $projects = $em->getRepository('AppBundle:Project')->findAll();
 
-        return $this->json('project/json.html.twig', array(
-            'projects' => $projects,
-        ));
+        return $this->json( $projects);
     }
 
 }
