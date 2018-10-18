@@ -142,12 +142,12 @@ class ProjectController extends Controller
             $e->latitude = $gps[1];
             $e->longitude = $gps[0];
             $gpsEvents[] = $e;
-            var_dump($events); die;
+            //var_dump($events); die;
         } 
  
        // var_dump($e); die;
 
-        return $this->json($e);
+        return $this->json($events);
     }
 
 }
