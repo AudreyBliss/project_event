@@ -20,9 +20,11 @@ function get_markers(){
   .then(function(response) {
     return response.json();
   })
-  .then(function(myJson) {
+  .then(function(myJson){
     console.log(JSON.stringify(myJson));
-  });
+    display_marker(L.marker([latitude, longitude]).addTo(mymap))
+    return response.json();
+    });
 }
 
 
