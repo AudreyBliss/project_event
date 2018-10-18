@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * Project
  */
-class Project
+class Project implements \JsonSerializable
 {
     /**
      * @var int
@@ -140,8 +140,9 @@ class Project
     }
 
 
-    public function toJson()
+    public function jsonSerialize()
     {
-        return json_encode($this);
+        $vars = get_object_vars($this);
+        return $vars;
     }
 }
