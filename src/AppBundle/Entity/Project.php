@@ -138,4 +138,10 @@ class Project
     {
         return $this->heure;
     }
+
+
+    public function toJson()
+    {
+        return json_encode($this);
+    }
 }
