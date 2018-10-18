@@ -23,7 +23,7 @@ function get_markers(){
   .then(function(myJson) {
     console.log(JSON.stringify(myJson));
     display_marker(L.marker(latitude, longitude))
-    return response.json();
+    return response.json(L.marker);
     });
 }
 
