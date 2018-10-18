@@ -22,7 +22,7 @@ function get_markers(){
   })
   .then(function(myJson) {
     console.log(JSON.stringify(myJson));
-    display_marker(L.marker[id](mymap, latitude, longitude))
+    display_marker(L.marker(id)(mymap, latitude, longitude))
     
     return response.json($gpsEvents);
     });
