@@ -33,7 +33,7 @@ class DefaultController extends Controller
        
        return $this->render('@App/event/event.html.twig', [
         'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        //'event' => $gpsEvents
+        'event' => $this ->getEvents()
         ]);
     
     }
