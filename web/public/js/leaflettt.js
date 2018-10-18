@@ -23,9 +23,9 @@ function get_markers(){
   .then(function(myJson) {
     console.log(JSON.stringify(myJson));
     //display_marker(mymap, latitude, longitude)
-    for (let events of myJson ){
-        console.log(events);
-    }  
+        for (let events of myJson ){
+            display_marker(mymap, events.latitude,events.longitude)
+        }  
     
    
     });
