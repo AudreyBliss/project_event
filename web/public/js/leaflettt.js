@@ -22,9 +22,12 @@ function get_markers(){
   })
   .then(function(myJson) {
     console.log(JSON.stringify(myJson));
-    display_marker(mymap, latitude, longitude) = 
-    L.marker([latitude, longitude]).addTo(mymap);
-    return response.json();
+    //display_marker(mymap, latitude, longitude)
+    for (let events of myJson ){
+        console.log(events);
+    }  
+    
+   
     });
 }
 
