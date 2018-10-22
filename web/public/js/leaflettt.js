@@ -30,7 +30,8 @@ function get_markers(){
     //display_marker(mymap, latitude, longitude)
         for (let events of myJson )
         {
-            display_marker(mymap, events.latitude,events.longitude, events.nom,events.localisation)
+            console.log(events)
+            display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation)
            
         }  
   });
