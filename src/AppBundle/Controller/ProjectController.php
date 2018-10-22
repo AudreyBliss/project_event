@@ -125,8 +125,19 @@ class ProjectController extends Controller
     public function jsonAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        switch ($em) {
+            case 1:
+            getRepository('AppBundle:Project')->findAll();
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+        }
 
-        $events = $em->getRepository('AppBundle:Project')->findAll();
+        //$events = $em->getRepository('AppBundle:Project')->findAll();
 
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
@@ -150,12 +161,5 @@ class ProjectController extends Controller
         return $this->json($gpsEvents);
     }
 
-
-    private function pastEventAction($request->Request){
-
-       $em =  $this->getDoctrine()->getManager();
-       $pastEvent =$em->getRepository('AppBundle:Project');
-       $pastEvent->find();
-    }
 
 }
