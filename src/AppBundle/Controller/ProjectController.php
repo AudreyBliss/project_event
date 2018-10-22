@@ -122,10 +122,10 @@ class ProjectController extends Controller
         ;
     }
 
-    public function jsonAction(Request $request)
+    public function jsonAction()
     {
-      /*  $em = $this->getDoctrine()->getManager();
-        switch ($em) {
+       $em = $this->getDoctrine()->getManager();
+         /*switch ($em) {
             case 1:
             getRepository('AppBundle:Project')->findAll();
                 break;
@@ -134,8 +134,8 @@ class ProjectController extends Controller
                 break;
             case 3:
                 
-                break;*/
-        }
+                break;
+        }*/
 
         $events = $em->getRepository('AppBundle:Project')->findAll();
 
