@@ -12,7 +12,10 @@ function display_map (mymap)
 
 function display_marker(mymap, latitude, longitude){
 
-    L.marker([latitude, longitude]).addTo(mymap);
+    /*L.marker([latitude, longitude]).addTo(mymap);*/
+    L.marker([latitude, longitude]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
 }
 
 function get_markers(){
@@ -25,11 +28,12 @@ function get_markers(){
     //display_marker(mymap, latitude, longitude)
         for (let events of myJson ){
             display_marker(mymap, events.latitude,events.longitude)
+           
         }  
-    
-   
-    });
+  });
 }
+
+
 
 
 

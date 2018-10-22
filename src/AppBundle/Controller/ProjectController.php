@@ -150,4 +150,12 @@ class ProjectController extends Controller
         return $this->json($gpsEvents);
     }
 
+
+    /*private pastEventAction($pastEvent){
+
+       $em =  $this->getDoctrine()->getManager();
+       $pastEvent =$em->getRepository('AppBundle:Project')
+       $pastEvent->find()
+    }*/
+
 }
