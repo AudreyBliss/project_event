@@ -31,7 +31,8 @@ function get_markers(){
         for (let events of myJson )
         {
             console.log(events)
-            display_marker(mymap, events.latitude,events.longitude, events.nom, events.adresse)
+            display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
+            )
            
         }  
   });
