@@ -137,6 +137,8 @@ class ProjectController extends Controller
                 break;
         }*/
 
+        $repository = $this->getDoctrine()->getRepository(Project::class);
+
         $events = $em->getRepository('AppBundle:Project')->findAll();
 
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
