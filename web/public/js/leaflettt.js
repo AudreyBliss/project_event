@@ -15,7 +15,7 @@ function display_marker(mymap, latitude, longitude){
     /*L.marker([latitude, longitude]).addTo(mymap);*/
    
     L.marker([latitude, longitude]).addTo(mymap)
-    .bindPopup('events.nom')
+    .bindPopup(events.nom)
     .openPopup();
 }
 
