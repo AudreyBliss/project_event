@@ -10,7 +10,7 @@ function display_map (mymap)
 
 }
 
-function display_marker(mymap, latitude, longitude, name, adress){
+function display_marker(mymap, latitude, longitude, name, address){
 
     /*L.marker([latitude, longitude]).addTo(mymap);*/
    
