@@ -10,10 +10,10 @@ function display_map (mymap)
 
 }
 
-function display_marker(mymap, latitude, longitude,nom){
+function display_marker(mymap, latitude, longitude){
 
     /*L.marker([latitude, longitude]).addTo(mymap);*/
-    for (let nom of myJson ){
+   // for (let events of myJson ){
         L.marker([latitude, longitude]).addTo(mymap)
         .bindPopup('events.nom')
         .openPopup();
