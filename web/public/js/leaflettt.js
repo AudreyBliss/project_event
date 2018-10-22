@@ -15,7 +15,7 @@ function display_marker(mymap, latitude, longitude, name, localisation){
     /*L.marker([latitude, longitude]).addTo(mymap);*/
     console.log(localisation)
     L.marker([latitude, longitude]).addTo(mymap)
-    .bindPopup(name +'<br/>' +localisation)
+    .bindPopup('<strong>' + name +'</strong>' +'<br/>' +localisation)
     .openPopup();
 }
 
