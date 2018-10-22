@@ -11,8 +11,9 @@ namespace AppBundle\Repository;
 class ProjectRepository extends \Doctrine\ORM\EntityRepository
 {
     private function pastEvent(){
-        $query = $em->createQuery('SELECT u FROM MyProject\Model\User u WHERE u.age > 20');
+        $query = $em->createQuery('SELECT p FROM EVENT\Pro\User p WHERE p.nom < 20');
         $pastEvent = $query->getResult();
        
     }
 }
+ 

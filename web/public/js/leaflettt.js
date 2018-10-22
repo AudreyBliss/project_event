@@ -15,13 +15,12 @@ function display_marker(mymap, latitude, longitude, name, localisation){
     /*L.marker([latitude, longitude]).addTo(mymap);*/
     console.log(localisation)
     L.marker([latitude, longitude]).addTo(mymap)
-    
-    .bindPopup(name + localisation)
+    .bindPopup(name +'</br>' +localisation)
     .openPopup();
 }
 
 function get_markers(){
-    fetch('http://51.75.31.40/project_event/web/app_dev.php/events/json')
+    fetch('http://51.75.31.40/project_event/web/app_dev.php/events/json?option=')
   .then(function(response) {
     return response.json();
   })
@@ -30,7 +29,6 @@ function get_markers(){
     //display_marker(mymap, latitude, longitude)
         for (let events of myJson )
         {
-            console.log(events)
             display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
             )
            

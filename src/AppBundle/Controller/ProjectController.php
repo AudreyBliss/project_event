@@ -122,7 +122,7 @@ class ProjectController extends Controller
         ;
     }
 
-    public function jsonAction()
+    public function jsonAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -151,7 +151,7 @@ class ProjectController extends Controller
     }
 
 
-    private function pastEventAction(){
+    private function pastEventAction($request->Request){
 
        $em =  $this->getDoctrine()->getManager();
        $pastEvent =$em->getRepository('AppBundle:Project');
