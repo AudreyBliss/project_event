@@ -13,8 +13,9 @@ function display_map (mymap)
 function display_marker(mymap, latitude, longitude){
 
     /*L.marker([latitude, longitude]).addTo(mymap);*/
+   
     L.marker([latitude, longitude]).addTo(mymap)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .bindPopup('events.latitude,events.longitude')
     .openPopup();
 }
 
