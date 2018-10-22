@@ -10,13 +10,13 @@ function display_map (mymap)
 
 }
 
-function display_marker(mymap, latitude, longitude, name){
+function display_marker(mymap, latitude, longitude, name, adress){
 
     /*L.marker([latitude, longitude]).addTo(mymap);*/
    
     L.marker([latitude, longitude]).addTo(mymap)
 
-    .bindPopup(name)
+    .bindPopup(name, address)
     .openPopup();
 }
 
@@ -30,8 +30,7 @@ function get_markers(){
     //display_marker(mymap, latitude, longitude)
         for (let events of myJson )
         {
-            console.log(events)
-            display_marker(mymap, events.latitude,events.longitude, events.nom)
+            display_marker(mymap, events.latitude,events.longitude, events.nom,events.localisation)
            
         }  
   });
