@@ -10,13 +10,13 @@ function display_map (mymap)
 
 }
 
-function display_marker(mymap, latitude, longitude, name, address){
+function display_marker(mymap, latitude, longitude, name, localisation){
 
     /*L.marker([latitude, longitude]).addTo(mymap);*/
    
     L.marker([latitude, longitude]).addTo(mymap)
 
-    .bindPopup(name, address)
+    .bindPopup(name, localisation)
     .openPopup();
 }
 
