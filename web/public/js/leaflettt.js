@@ -15,7 +15,7 @@ function display_marker(mymap, latitude, longitude){
     /*L.marker([latitude, longitude]).addTo(mymap);*/
    // for (let events of myJson ){
         L.marker([latitude, longitude]).addTo(mymap)
-        .bindPopup('events.nom')
+        .bindPopup()
         .openPopup();
     }
 }
