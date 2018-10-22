@@ -151,11 +151,11 @@ class ProjectController extends Controller
     }
 
 
-    /*private pastEventAction($pastEvent){
+    private function pastEventAction(){
 
        $em =  $this->getDoctrine()->getManager();
-       $pastEvent =$em->getRepository('AppBundle:Project')
-       $pastEvent->find()
-    }*/
+       $pastEvent =$em->getRepository('AppBundle:Project');
+       $pastEvent->find();
+    }
 
 }
