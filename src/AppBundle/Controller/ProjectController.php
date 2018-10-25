@@ -126,7 +126,7 @@ class ProjectController extends Controller
 
     public function jsonAction(Request $request)
     {
-       //$em = $this->getDoctrine()->getManager();
+         $em = $this->getDoctrine()->getManager();
          switch ($request->query->get('option')) {
             case 'allEvent':
             $events = $em -> getRepository('AppBundle:Project')->findAll();
@@ -145,7 +145,8 @@ class ProjectController extends Controller
         $gpsEvents = []; 
            
         foreach($events as $e) {
-           $adresse = str_replace(' ', '+', $e->getLocalisation());// pour une entité privé ou protected
+            var_dump($events);die;  
+            $adresse = str_replace(' ', '+', $e->getLocalisation());// pour une entité privé ou protected
            
             $suggestions = json_decode($curl->curl_get($adresse),true);
             $gps = $suggestions['features'][0]['geometry']['coordinates'];
