@@ -143,9 +143,9 @@ class ProjectController extends Controller
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
         $gpsEvents = []; 
-           
+        var_dump($events);die;
         foreach($events as $e) {
-            var_dump($events);die;  
+              
             $adresse = str_replace(' ', '+', $e->getLocalisation());// pour une entité privé ou protected
            
             $suggestions = json_decode($curl->curl_get($adresse),true);
