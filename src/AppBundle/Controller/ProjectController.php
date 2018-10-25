@@ -123,9 +123,9 @@ class ProjectController extends Controller
     }
 
     public function jsonAction(Request $request)
-    {var_dump($request);die;
+    {var_dump($request->query->get('eventType'));die;
        $em = $this->getDoctrine()->getManager();
-         switch ($request->request->get('eventType')) {
+         switch ($request->query->get('eventType')) {
             case 'allEvent':
             $events = $em -> getRepository('AppBundle:Project')->findAll();
                 break;
