@@ -132,7 +132,7 @@ class ProjectController extends Controller
             $events = $em -> getRepository('AppBundle:Project')->findAll();
                 break;
             case 'pastEvent':
-            $events = $em -> getRepository('AppBundle:Project')->pastEvent();   
+            $events = $em -> getRepository('AppBundle:Project')->findpastEvent();   
                 break;
            
         }
