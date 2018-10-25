@@ -126,7 +126,7 @@ class ProjectController extends Controller
 
     public function jsonAction(Request $request)
     {
-       $em = $this->getDoctrine()->getManager();
+       //$em = $this->getDoctrine()->getManager();
          switch ($request->query->get('option')) {
             case 'allEvent':
             $events = $em -> getRepository('AppBundle:Project')->findAll();
@@ -137,10 +137,7 @@ class ProjectController extends Controller
            
         }
 
-        //$repository = $this->getDoctrine()->getRepository(Project::class);
-
-       // $events = $em =  $this->getDoctrine()->getRepository('AppBundle:Project')->find();
-
+        
        // $events = $em->getRepository('AppBundle:Project')->findAll();
 
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
