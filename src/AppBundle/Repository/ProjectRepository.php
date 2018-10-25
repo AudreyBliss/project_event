@@ -10,9 +10,9 @@ namespace AppBundle\Repository;
  */
 class ProjectRepository extends \Doctrine\ORM\EntityRepository
 {
-    private function pastEvent(){
+    private function findPastEvent(){
         $query = $repository->createQueryBuilder('p')
-        ->where('p.date > :date')
+        ->where('p.date < :date')
         ->setParameter('date', '22/10/2018')
         ->getQuery();
 

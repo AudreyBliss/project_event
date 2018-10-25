@@ -19,8 +19,8 @@ function display_marker(mymap, latitude, longitude, name, localisation){
     .openPopup();
 }
 
-function get_markers(){
-    fetch('http://51.75.31.40/project_event/web/app_dev.php/events/json?option=')
+function get_markers(eventType){
+    fetch(`http://51.75.31.40/project_event/web/app_dev.php/events/json?option=${eventType}`)
   .then(function(response) {
     return response.json();
   })
@@ -32,7 +32,10 @@ function get_markers(){
             display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
             )
            
-        }  
+        }
+        
+     
+
   });
 }
 

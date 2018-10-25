@@ -123,25 +123,25 @@ class ProjectController extends Controller
     }
 
     public function jsonAction(Request $request)
-    {
+    {var_dump($request);die;
        $em = $this->getDoctrine()->getManager();
-         /*switch ($em) {
-            case 1:
-            getRepository('AppBundle:Project')->findAll();
+         switch ($request->request->get('eventType')) {
+            case 'allEvent':
+            $events = $em -> getRepository('AppBundle:Project')->findAll();
                 break;
-            case 2:
-                
+            case 'pastEvent':
+            $events = $em -> getRepository('AppBundle:Project')->findPastEvent();   
                 break;
             case 3:
                 
                 break;
-        }*/
+        }
 
         //$repository = $this->getDoctrine()->getRepository(Project::class);
 
        // $events = $em =  $this->getDoctrine()->getRepository('AppBundle:Project')->find();
 
-        $events = $em->getRepository('AppBundle:Project')->findAll();
+       // $events = $em->getRepository('AppBundle:Project')->findAll();
 
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
