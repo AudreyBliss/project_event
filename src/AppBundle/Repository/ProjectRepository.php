@@ -16,7 +16,7 @@ class ProjectRepository extends \Doctrine\ORM\EntityRepository
         ->setParameter('date', (new \DateTime())->format('Y-m-d'))
         ->getQuery();
 
-$projects = $query->getResult();
+    return $query->getResult();
        
     }
 }
