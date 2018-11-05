@@ -143,7 +143,7 @@ class ProjectController extends Controller
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
         $gpsEvents = []; 
-        var_dump($events);die;
+        
         foreach($events as $e) {
               
             $adresse = str_replace(' ', '+', $e->getLocalisation());// pour une entité privé ou protected
@@ -155,10 +155,10 @@ class ProjectController extends Controller
             $e->latitude = $gps[1];
             $e->longitude = $gps[0];
             $gpsEvents[] = $e;
-            //var_dump($events); die;
+            
         } 
  
-        //var_dump(json_encode($gpsEvents)); die;
+        
 
         return $this->json($gpsEvents);
     }
