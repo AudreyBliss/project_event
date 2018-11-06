@@ -134,7 +134,7 @@ class ProjectController extends Controller
                 break;
             case 'allEvent';
             default:
-            $events = $em -> getRepository('AppBundle:Project')->findAll();
+        $events = $em -> getRepository('AppBundle:Project')->findAll();
            
         }
 

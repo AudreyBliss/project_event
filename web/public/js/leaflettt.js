@@ -33,12 +33,22 @@ function get_markers(eventType){
             )
            
         }
-        
-     
-
-  });
+    });
 }
 
+// let state;
+
+// function onPastEvent(){
+
+// }
+
+function get_option(){
+    // document.getElementById("e_past").addEventListener("click", function get_option();
+    // document.getElementById("e_all").addEventListener("click", function get_option();
+    let past = document.getElementById('e_past')
+    past.addEventListener('click', get_option())
+
+}
 
 
 
