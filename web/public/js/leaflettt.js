@@ -48,6 +48,8 @@ function get_option(){
     let past = document.getElementById('e_past')
     past.addEventListener('click', get_option())
 
+    let futur = document.getElementById('e_futur')
+    futur.addEventListener('click', get_option())
 }
 
 
