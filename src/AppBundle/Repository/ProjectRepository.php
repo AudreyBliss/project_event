@@ -19,5 +19,17 @@ class ProjectRepository extends \Doctrine\ORM\EntityRepository
     return $query->getResult();
        
     }
+
+    public function findfuturEvent(){
+        $query = $this->createQueryBuilder('p')
+        ->where('p.date > :date')
+        ->setParameter('date', (new \DateTime())->format('Y-m-d'))
+        ->getQuery();
+
+    return $query->getResult();
+       
+    }
+
 }
+
  

@@ -138,8 +138,7 @@ class ProjectController extends Controller
            
         }
 
-        
-       // $events = $em->getRepository('AppBundle:Project')->findAll();
+        // $events = $em->getRepository('AppBundle:Project')->findAll();
 
         $curl = $this -> get('AppBundle\Network\ServiceCurl');
 
