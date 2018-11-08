@@ -46,19 +46,19 @@ function get_markers(eventType){
     // document.getElementById("e_past").addEventListener("click", function get_option();
     // document.getElementById("e_all").addEventListener("click", function get_option();
     let past = document.getElementById('e_past')
-    past.addEventListener('click', get_option)
+    past.addEventListener('click', get_callMarkers)
 
     let futur = document.getElementById('e_futur')
-    futur.addEventListener('click', get_option)
+    futur.addEventListener('click', get_callMarkers)
 
     let all = document.getElementById('e_all')
-    all.addEventListener('click', get_option) 
+    all.addEventListener('click', get_callMarkers) 
 
-function get_option(){
-    
-    past.toggle('e_past')
-    futur.toggle('e_futur')
-    all.toggle('e_futur')
+function get_callMarkers(event){
+    console.log(event.target) 
+    // past.classList.toggle('e_past')
+    // futur.classList.toggle('e_futur')
+    // all.classList.toggle('e_futur')
 }
 
 
