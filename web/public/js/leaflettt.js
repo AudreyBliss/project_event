@@ -42,16 +42,22 @@ function get_markers(eventType){
 
 // }
 
-function get_option(){
+
     // document.getElementById("e_past").addEventListener("click", function get_option();
     // document.getElementById("e_all").addEventListener("click", function get_option();
     let past = document.getElementById('e_past')
-    past.addEventListener('click', get_option())
+    past.addEventListener('click', get_option)
 
     let futur = document.getElementById('e_futur')
-    futur.addEventListener('click', get_option())
+    futur.addEventListener('click', get_option)
+
+    let all = document.getElementById('e_all')
+    futur.addEventListener('click', get_option) 
+
+function get_option(){
+    past.toggle('e_past')
+    futur.toggle('e_futur')
+    all.toggle('e_futur')
 }
-
-
 
 
