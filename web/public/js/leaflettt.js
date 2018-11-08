@@ -52,9 +52,10 @@ function get_markers(eventType){
     futur.addEventListener('click', get_option)
 
     let all = document.getElementById('e_all')
-    futur.addEventListener('click', get_option) 
+    all.addEventListener('click', get_option) 
 
 function get_option(){
+    
     past.toggle('e_past')
     futur.toggle('e_futur')
     all.toggle('e_futur')
