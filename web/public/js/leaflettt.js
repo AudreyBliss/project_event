@@ -36,6 +36,23 @@ function get_markers(eventType){
     });
 }
 
+function get_markers(pastEvent){
+    fetch(`http://51.75.31.40/project_event/web/app_dev.php/events/json?option=${pastEvent}`)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+    //display_marker(mymap, latitude, longitude)
+        for (let futurEvents of myJson )
+        {
+            display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
+            )
+           
+        }
+    });
+}
+
 // let state;
 
 // function onPastEvent(){
@@ -43,8 +60,8 @@ function get_markers(eventType){
 // }
 
 
-    // document.getElementById("e_past").addEventListener("click", function get_option();
-    // document.getElementById("e_all").addEventListener("click", function get_option();
+    // document.getElementById("e_past").addEventListener("click", function get_option());
+    // document.getElementById("e_all").addEventListener("click", function get_option());
     
 
 function get_callMarkers(event){

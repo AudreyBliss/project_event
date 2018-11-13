@@ -135,7 +135,9 @@ class ProjectController extends Controller
             case 'allEvent';
             default:
         $events = $em -> getRepository('AppBundle:Project')->findAll();
-           
+            case 'futurEvent':
+        $events = $em -> getRepository('AppBundle:Project')->findfuturEvent(); 
+               break;
         }
 
         // $events = $em->getRepository('AppBundle:Project')->findAll();
