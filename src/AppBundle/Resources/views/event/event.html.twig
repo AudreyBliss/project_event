@@ -100,15 +100,15 @@
     
        <script defer>
       {#{{marker_map(mymap)}}#} 
-      get_markers('allEvent');
+      get_markers();
     //1ere methode:
-       let past = document.getElementById('e_past')
+       let past = document.getElementById('pastEvent')
     past.addEventListener('click', get_markers)
 
-    let futur = document.getElementById('e_futur')
+    let futur = document.getElementById('futurEvent')
     futur.addEventListener('click', get_markers)
 
-    let all = document.getElementById('e_all')
+    let all = document.getElementById('allEvent')
     all.addEventListener('click', get_markers)
 
     {# //2eme methode:

@@ -21,8 +21,9 @@ function display_marker(mymap, latitude, longitude, name, localisation){
 
 
 
-function get_markers(event){
-    eventtype = event.target.id
+function get_markers(event = null){
+    eventtype = event === null ? 'allEvent' : event.target.id
+    //eventtype = event  ?si elle est fausse'allEvent' :sinon event.target.id
     fetch(`http://51.75.31.40/project_event/web/app_dev.php/events/json?option=${eventtype}`)
   .then(function(response) {
     return response.json();
