@@ -101,15 +101,24 @@
        <script defer>
       {#{{marker_map(mymap)}}#} 
       get_markers('allEvent');
-
+    //1ere methode:
        let past = document.getElementById('e_past')
-    past.addEventListener('click', get_callMarkers)
+    past.addEventListener('click', get_markers)
 
     let futur = document.getElementById('e_futur')
-    futur.addEventListener('click', get_callMarkers)
+    futur.addEventListener('click', get_markers)
 
     let all = document.getElementById('e_all')
-    all.addEventListener('click', get_callMarkers)
+    all.addEventListener('click', get_markers)
+
+    {# //2eme methode:
+    ajouter une même classe à toutes les cibles,
+    for(elt of document.querySelector('.nom de la class')){
+       elt.addEventListener('click', get_callMarkers) 
+    } #}
+
+    
+
 
       </script>
 </main>

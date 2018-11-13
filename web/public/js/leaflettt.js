@@ -19,8 +19,11 @@ function display_marker(mymap, latitude, longitude, name, localisation){
     .openPopup();
 }
 
-function get_markers(eventType){
-    fetch(`http://51.75.31.40/project_event/web/app_dev.php/events/json?option=${eventType}`)
+
+
+function get_markers(event){
+    eventtype = event.target.id
+    fetch(`http://51.75.31.40/project_event/web/app_dev.php/events/json?option=${eventtype}`)
   .then(function(response) {
     return response.json();
   })
@@ -31,44 +34,9 @@ function get_markers(eventType){
         {
             display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
             )
-           
         }
     });
-}
-
-function get_markers(pastEvent){
-    fetch(`http://51.75.31.40/project_event/web/app_dev.php/events/json?option=${pastEvent}`)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
-    //display_marker(mymap, latitude, longitude)
-        for (let futurEvents of myJson )
-        {
-            display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
-            )
-           
-        }
-    });
-}
-
-// let state;
-
-// function onPastEvent(){
-
-// }
-
-
-    // document.getElementById("e_past").addEventListener("click", function get_option());
-    // document.getElementById("e_all").addEventListener("click", function get_option());
     
-
-function get_callMarkers(event){
-    console.log(event.target) 
-    // past.classList.toggle('e_past')
-    // futur.classList.toggle('e_futur')
-    // all.classList.toggle('e_futur')
 }
 
 
