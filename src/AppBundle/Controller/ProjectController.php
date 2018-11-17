@@ -130,7 +130,7 @@ class ProjectController extends Controller
          $em = $this->getDoctrine()->getManager();
          switch ($request->query->get('option')) {
             case 'pastEvent':
-                $events = $em -> getRepository('AppBundle:Project')->pastEvent(); 
+                $events = $em -> getRepository('AppBundle:Project')->findpastEvent(); 
                 break;
             case 'futurEvent':
                 $events = $em -> getRepository('AppBundle:Project')->findfuturEvent(); 

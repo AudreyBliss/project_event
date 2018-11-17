@@ -91,10 +91,10 @@
 
 
     <div>
-        <button id="e_past">Evenements passés</button>
-        <button id="e_futur">Evenements futur</button>
+        <button id="pastEvent">Evenements passés</button>
+        <button id="futurEvent">Evenements futur</button>
         <button id="e_around">Evenements près de chez moi</button>
-        <button id="e_all"> Tout les évenements </button>
+        <button id="allEvent"> Tout les évenements </button>
 
     </div>
     
@@ -102,7 +102,7 @@
       {#{{marker_map(mymap)}}#} 
       get_markers();
     //1ere methode:
-     document.getElementById('pastEvent')
+    let document.getElementById('pastEvent')
     past.addEventListener('click', get_markers)
 
     let futur = document.getElementById('futurEvent')
