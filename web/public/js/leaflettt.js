@@ -1,3 +1,5 @@
+var markers = null;
+
 function display_map (mymap)
 {
    
@@ -14,9 +16,13 @@ function display_marker(mymap, latitude, longitude, name, localisation){
 
     /*L.marker([latitude, longitude]).addTo(mymap);*/
     console.log(localisation)
-    L.marker([latitude, longitude]).addTo(mymap)
+    // L.marker([latitude, longitude])
+    let 
+    marker = new L.Marker([latitude, longitude])
+    marker.addTo(mymap)
     .bindPopup('<strong>' + name +'</strong>' +'<br/>' +localisation)
     .openPopup();
+    markers.push(marker)// enregistre marker ds le tableau markers
 }
 
 
@@ -35,6 +41,7 @@ function get_markers(event = null){
         {
             display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
             )
+            console.log(markers);
         }
     });
     
