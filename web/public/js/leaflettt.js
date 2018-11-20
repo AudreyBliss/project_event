@@ -23,6 +23,7 @@ function display_marker(mymap, latitude, longitude, name, localisation){
     .bindPopup('<strong>' + name +'</strong>' +'<br/>' +localisation)
     .openPopup();
     markers.push(marker)// enregistre marker ds le tableau markers
+    console.log(marker);
 }
 
 
@@ -37,10 +38,12 @@ function get_markers(event = null){
   .then(function(myJson) {
     console.log(JSON.stringify(myJson));
     //display_marker(mymap, latitude, longitude)
+        for (m of markers) {
+            mymap.removeLayer(marker)
+        }
         for (let events of myJson )
         {
-            display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation
-            )
+            display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation)
             console.log(markers);
         }
     });
