@@ -39,7 +39,7 @@ function get_markers(event = null){
     console.log(JSON.stringify(myJson));
     //display_marker(mymap, latitude, longitude)
         for (m of markers) {
-            mymap.removeLayer(marker)
+            mymap.removeLayer(m)
         }
         for (let events of myJson )
         {
