@@ -1,4 +1,4 @@
-var markers = null;
+var markers = [];
 
 function display_map (mymap)
 {
