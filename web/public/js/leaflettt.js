@@ -23,7 +23,7 @@ function display_marker(mymap, latitude, longitude, name, localisation){
     .bindPopup('<strong>' + name +'</strong>' +'<br/>' +localisation)
     .openPopup();
     markers.push(marker)// enregistre marker ds le tableau markers
-    console.log(marker);
+    console.log(markers);
 }
 
 
@@ -44,8 +44,9 @@ function get_markers(event = null){
         for (let events of myJson )
         {
             display_marker(mymap, events.latitude,events.longitude, events.nom, events.localisation)
-            console.log(markers);
+            
         }
+        console.log(markers);
     });
     
 }
